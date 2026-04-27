@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "name": "Sarah Chen",
+        "year": 2018,
+        "location": "San Francisco, CA",
+        "profession": "Senior Product Manager",
+        "company": "Meta",
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+    },
+    {
+        "id": 2,
+        "name": "James Rodriguez",
+        "year": 2019,
+        "location": "New York, NY",
+        "profession": "Software Engineer",
+        "company": "Goldman Sachs",
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=James"
+    },
+    {
+        "id": 3,
+        "name": "Emma Watson",
+        "year": 2017,
+        "location": "London, UK",
+        "profession": "Data Scientist",
+        "company": "DeepMind",
+        "latitude": 51.5074,
+        "longitude": -0.1278,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma"
+    },
+    {
+        "id": 4,
+        "name": "Raj Patel",
+        "year": 2020,
+        "location": "Bangalore, India",
+        "profession": "Full Stack Developer",
+        "company": "Infosys",
+        "latitude": 12.9716,
+        "longitude": 77.5946,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Raj"
+    },
+    {
+        "id": 5,
+        "name": "Yuki Tanaka",
+        "year": 2019,
+        "location": "Tokyo, Japan",
+        "profession": "UX/UI Designer",
+        "company": "Sony",
+        "latitude": 35.6762,
+        "longitude": 139.6503,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Yuki"
+    },
+    {
+        "id": 6,
+        "name": "Lena Mueller",
+        "year": 2018,
+        "location": "Berlin, Germany",
+        "profession": "Machine Learning Engineer",
+        "company": "SoundCloud",
+        "latitude": 52.5200,
+        "longitude": 13.4050,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Lena"
+    },
+    {
+        "id": 7,
+        "name": "Lucas Silva",
+        "year": 2021,
+        "location": "São Paulo, Brazil",
+        "profession": "Backend Engineer",
+        "company": "Nubank",
+        "latitude": -23.5505,
+        "longitude": -46.6333,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Lucas"
+    },
+    {
+        "id": 8,
+        "name": "Amira Ahmed",
+        "year": 2019,
+        "location": "Dubai, UAE",
+        "profession": "Startup Founder",
+        "company": "TechVenture",
+        "latitude": 25.2048,
+        "longitude": 55.2708,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Amira"
+    },
+    {
+        "id": 9,
+        "name": "Sophie Leblanc",
+        "year": 2017,
+        "location": "Paris, France",
+        "profession": "Senior Architect",
+        "company": "Airbnb",
+        "latitude": 48.8566,
+        "longitude": 2.3522,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sophie"
+    },
+    {
+        "id": 10,
+        "name": "Marco Rossi",
+        "year": 2020,
+        "location": "Milan, Italy",
+        "profession": "DevOps Engineer",
+        "company": "Roche",
+        "latitude": 45.4642,
+        "longitude": 9.1900,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Marco"
+    },
+    {
+        "id": 11,
+        "name": "Aisha Johnson",
+        "year": 2018,
+        "location": "Toronto, Canada",
+        "profession": "Product Designer",
+        "company": "Shopify",
+        "latitude": 43.6532,
+        "longitude": -79.3832,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aisha"
+    },
+    {
+        "id": 12,
+        "name": "David Kim",
+        "year": 2019,
+        "location": "Seoul, South Korea",
+        "profession": "Blockchain Developer",
+        "company": "Samsung",
+        "latitude": 37.5665,
+        "longitude": 126.9780,
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=David"
+    }
+]
