@@ -1,105 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alumni Network - Global Community</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CollegePrep Programme</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="https://unpkg.com/lucide@0.244.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
-    <!-- 3D Globe Canvas -->
-    <div id="canvas-container"></div>
+  <div class="aurora-bg"></div>
 
-    <!-- Starfield Background -->
-    <canvas id="starfield"></canvas>
+  <nav class="glass-panel main-nav">
+    <div class="logo">CollegePrep.</div>
+    <div class="nav-links">
+      <a href="#network">Network</a>
+      <a href="#team">Team</a>
+      <a href="#sessions">Sessions</a>
+    </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <h1 class="logo">Alumni Network</h1>
-            <p class="tagline">Connect with 10,000+ alumni worldwide</p>
-        </div>
-    </header>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        <span class="text-rewind" data-strings='["CollegePrep Programme","Global Student Network"]'></span>
+      </h1>
+      <p class="hero-subtitle">Connecting students, mentors, and opportunities worldwide.</p>
 
-    <!-- Info Panel -->
-    <div class="info-panel">
-        <div class="info-content">
-            <h2>Global Alumni Network</h2>
-            <p>Explore connections across continents. Click any location to discover alumni stories.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="stat-number" id="stat-alumni">0</span>
-                    <span class="stat-label">Alumni</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="stat-countries">0</span>
-                    <span class="stat-label">Countries</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="stat-years">0</span>
-                    <span class="stat-label">Years</span>
-                </div>
-            </div>
-        </div>
+      <div class="cta-group">
+        <a href="#network" class="btn btn-primary">Explore Network</a>
+        <a href="#team" class="btn btn-secondary glass-panel">Meet the Team</a>
+      </div>
     </div>
 
-    <!-- Alumni Hover Preview Card -->
-    <div id="alumni-preview" class="alumni-preview">
-        <p id="preview-name" class="preview-name">Alumni Name</p>
+    <div class="hero-decor">
+      <div class="aurora aurora-1"></div>
+      <div class="aurora aurora-2"></div>
+      <div class="floating-blobs"></div>
     </div>
+  </header>
 
-    <!-- Alumni Details Card -->
-    <div id="alumni-card" class="alumni-card">
-        <button class="close-btn" aria-label="Close card">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-        <div class="card-content">
-            <div class="card-header">
-                <div id="card-image" class="card-image"></div>
-                <div class="card-info">
-                    <h3 id="card-name">Alumni Name</h3>
-                    <p id="card-year" class="card-year">Class of 2020</p>
-                </div>
-            </div>
-            <div class="card-details">
-                <div class="detail-item">
-                    <span class="detail-label">Location</span>
-                    <span id="card-location" class="detail-value">San Francisco, CA</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Current Role</span>
-                    <span id="card-profession" class="detail-value">Software Engineer</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Company</span>
-                    <span id="card-company" class="detail-value">Tech Corp</span>
-                </div>
-            </div>
-            <div class="card-actions">
-                <button class="btn btn-secondary">Connect</button>
-                <button class="btn btn-primary">Learn More</button>
-            </div>
-        </div>
+  <section id="network" class="globe-section">
+    <div class="globe-ui">
+      <div class="search-container glass-panel">
+        <input type="text" id="studentSearch" placeholder="Search by name, location, or year...">
+        <ul id="searchResults" class="search-results hidden"></ul>
+      </div>
     </div>
-
-    <!-- Loading Indicator -->
-    <div id="loading" class="loading">
-        <div class="loading-spinner"></div>
-        <p>Loading alumni network...</p>
-    </div>
-
-    <!-- Controls Hint -->
-    <div class="controls-hint">
-        <p>🖱️ Drag to rotate • Scroll to zoom • Click dots to learn more</p>
-    </div>
-
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
-    <!-- Main Scripts -->
-    <script src="script.js"></script>
+    <div id="globeViz"></div>
+
+    <div id="student-card" class="student-card glass-panel hidden">
+      <button class="close-card" onclick="closeStudentCard()">×</button>
+      <img id="card-img" src="" alt="Student">
+      <h3 id="card-name"></h3>
+      <p id="card-profession" class="accent-text"></p>
+      <p id="card-company"></p>
+      <div class="card-meta">
+        <span id="card-location"></span> • <span id="card-year"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="content-section">
+    <h2 class="section-title"><span class="text-rewind" data-strings='["Meet the Team"]'></span></h2>
+    <div class="grid-container" id="team-grid"></div>
+  </section>
+
+  <section id="sessions" class="content-section">
+    <h2 class="section-title"><span class="text-rewind" data-strings='["Session Recordings","Recent Sessions"]'></span></h2>
+    <div class="grid-container" id="sessions-grid"></div>
+  </section>
+
+  <footer class="glass-panel minimal-footer">
+    <p>&copy; 2026 CollegePrep Programme. Designed for excellence.</p>
+  </footer>
+
+  <script src="textrewind.js"></script>
+  <script>
+    // Init TextRewind instances after page load
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.text-rewind').forEach(el => new TextRewind(el, {
+        interval: 40,
+        pause: 1600,
+        shadowColors: {
+          first: "#F5BC18",
+          second: "#D69F00",
+          third: "#4F279A",
+          fourth: "#36107A",
+          glow: "#F5BC18"
+        }
+      }));
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
